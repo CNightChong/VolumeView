@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VolumeView">
+        <attr name="rect_count" format="integer" />
+        <attr name="rect_width" format="dimension|reference" />
+        <attr name="rect_color" format="color|reference" />
+        <attr name="rect_offset" format="dimension|reference" />
+        <attr name="rect_interval" format="integer" />
+        <attr name="both_side" format="boolean" />
+        <attr name="need_line" format="boolean" />
+        <attr name="line_color" format="color|reference" />
+    </declare-styleable>
+</resources>
