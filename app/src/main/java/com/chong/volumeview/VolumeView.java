@@ -127,16 +127,16 @@ public class VolumeView extends View {
 
     }
 
-    @Override
-    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        super.onSizeChanged(w, h, oldw, oldh);
-        // 颜色渐变，以后添加
+//    @Override
+//    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+//        super.onSizeChanged(w, h, oldw, oldh);
+//        // 颜色渐变，以后添加
 //        LinearGradient mLinearGradient = new LinearGradient(0, 0,
 //                mRectWidth, mRectHeight,
 //                Color.YELLOW, Color.GREEN,
 //                Shader.TileMode.CLAMP);
 //        mRectPaint.setShader(mLinearGradient);
-    }
+//    }
 
     @Override
     protected void onDraw(Canvas canvas) {
@@ -197,6 +197,7 @@ public class VolumeView extends View {
 
     public void setRectOffset(int rectOffset) {
         mRectOffset = rectOffset;
+        requestLayout();
     }
 
     public int getRectWidth() {
@@ -205,6 +206,7 @@ public class VolumeView extends View {
 
     public void setRectWidth(int rectWidth) {
         mRectWidth = rectWidth;
+        requestLayout();
     }
 
     public int getRectCount() {
@@ -213,6 +215,7 @@ public class VolumeView extends View {
 
     public void setRectCount(int rectCount) {
         mRectCount = rectCount;
+        requestLayout();
     }
 
     public int getRectColor() {
@@ -221,6 +224,7 @@ public class VolumeView extends View {
 
     public void setRectColor(int rectColor) {
         mRectColor = rectColor;
+        invalidate();
     }
 
     public int getLineColor() {
@@ -229,6 +233,7 @@ public class VolumeView extends View {
 
     public void setLineColor(int lineColor) {
         mLineColor = lineColor;
+        invalidate();
     }
 
     public int getInterval() {
@@ -237,21 +242,5 @@ public class VolumeView extends View {
 
     public void setInterval(int interval) {
         mInterval = interval;
-    }
-
-    public boolean isBothSide() {
-        return mBothSide;
-    }
-
-    public void setBothSide(boolean bothSide) {
-        mBothSide = bothSide;
-    }
-
-    public boolean isNeedLine() {
-        return mNeedLine;
-    }
-
-    public void setNeedLine(boolean needLine) {
-        mNeedLine = needLine;
     }
 }
